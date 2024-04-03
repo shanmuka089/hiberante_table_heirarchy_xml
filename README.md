@@ -1,0 +1,1 @@
+# hiberante_table_per_heirarchy_xml
