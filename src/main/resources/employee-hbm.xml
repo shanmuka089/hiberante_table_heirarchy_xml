@@ -1,0 +1,22 @@
+<hibernate-mapping>
+	<class name="com.hibernate.entities.Employee" table="emp_xml" discriminator-value="emp">
+		<id name="employeeId" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+
+		<discriminator column="type" type="string"></discriminator>
+
+		<property name="name"></property>
+
+		<subclass name="com.hibernate.entities.RegularEmployee" discriminator-value="reg_emp">
+			<property name="salary"></property>
+			<property name="bonus"></property>
+		</subclass>
+
+		<subclass name="com.hibernate.entities.PartTimeEmployee" discriminator-value="part_emp">
+			<property name="payPerHour"></property>
+			<property name="contractPeriod"></property>
+		</subclass>
+	</class>
+
+</hibernate-mapping>  
