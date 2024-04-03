@@ -27,6 +27,11 @@ public class RegularEmployee extends Employee{
 		this.salary = salary;
 		this.bonus = bonus;
 	}
+	
+	public RegularEmployee(double salary, int bonus) {
+		this.salary = salary;
+		this.bonus = bonus;
+	}
 
 	public RegularEmployee(int id, String name) {
 		super(id, name);

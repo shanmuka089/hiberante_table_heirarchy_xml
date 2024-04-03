@@ -11,6 +11,11 @@ public class PartTimeEmployee extends Employee{
 		this.payPerHour = payPerHour;
 		this.contractPeriod = contractPeriod;
 	}
+	
+	public PartTimeEmployee(double payPerHour, String contractPeriod) {
+		this.payPerHour = payPerHour;
+		this.contractPeriod = contractPeriod;
+	}
 
 	public PartTimeEmployee(int id, String name) {
 		super(id, name);

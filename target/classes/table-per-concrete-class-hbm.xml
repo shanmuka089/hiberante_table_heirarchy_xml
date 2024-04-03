@@ -1,0 +1,20 @@
+<hibernate-mapping>
+	<class name="com.hibernate.entities.Employee" table="emp_xml">
+		<id name="employeeId" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+
+		<property name="name"></property>
+
+		<union-subclass name="com.hibernate.entities.RegularEmployee" table="reg_emp">
+			<property name="salary"></property>
+			<property name="bonus"></property>
+		</union-subclass>
+
+		<union-subclass name="com.hibernate.entities.PartTimeEmployee" table="part_emp">
+			<property name="payPerHour"></property>
+			<property name="contractPeriod"></property>
+		</union-subclass>
+	</class>
+
+</hibernate-mapping>  
